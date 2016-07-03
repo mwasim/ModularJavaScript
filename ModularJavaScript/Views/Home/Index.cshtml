@@ -69,7 +69,14 @@
     <script src="~/Scripts/app/app.js"></script>
     <script>
         $(function () {
-            ProductsController.init();
+
+            var emptyResultContainer = $("#dvNotFound");
+            var productsContainer = $("#dvProducts");
+            var btnSearch = $("#btnSearch");
+            var inputSearchTerm = $("#searchTerm");
+            var productsTemplate = $("#tplProducts");
+
+            ProductsController.init(emptyResultContainer, productsContainer, btnSearch, inputSearchTerm, productsTemplate);
         });
     </script>
 }
